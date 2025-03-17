@@ -49,7 +49,7 @@ export function OpenSourceSection() {
                                             <div key={i} className="border-l-2 border-primary pl-4">
                                                 <div className="text-lg font-medium">
                                                     <Link
-                                                        href={(pkg as any).link}
+                                                        href={pkg.link}
                                                         target="_blank"
                                                         rel="noopener noreferrer"
                                                         className="hover:underline"
