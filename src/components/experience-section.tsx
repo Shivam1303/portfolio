@@ -9,7 +9,7 @@ export function ExperienceSection() {
     return (
         <section id="experience" className="">
             <div className="layout-wrapper" ref={containerRef}>
-                <h2 className="text-3xl font-bold tracking-tight mb-10 text-center">
+                <h2 className="w-full border-b pb-4 text-3xl font-bold tracking-tight mb-10 text-center">
                     Work Experience
                 </h2>
 

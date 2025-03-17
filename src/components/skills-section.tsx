@@ -33,7 +33,7 @@ export function SkillsSection() {
     return (
         <section id="skills" className="">
             <div className="layout-wrapper" ref={containerRef}>
-                <h2 className="reveal-item text-3xl font-bold tracking-tight mb-12 text-center">
+                <h2 className="w-full border-b pb-4 text-3xl font-bold tracking-tight mb-12 text-center">
                     Skills
                 </h2>
 
@@ -41,7 +41,7 @@ export function SkillsSection() {
                     {profileData.skills.map((skillCategory, index) => (
                         <div
                             key={index}
-                            className={`reveal-item ${index === 0 ? "" : "reveal-delay-" + index} rounded-lg py-4`}
+                            className="rounded-lg py-4"
                         >
                             <h3 className="text-2xl font-semibold mb-6">{skillCategory.category}</h3>
                             <div className="flex flex-wrap gap-3">

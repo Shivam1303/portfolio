@@ -11,7 +11,7 @@ export function ProjectsSection() {
     return (
         <section id="projects" className="">
             <div className="layout-wrapper" ref={containerRef}>
-                <h2 className="text-3xl font-bold tracking-tight mb-4 text-center">
+                <h2 className="w-full border-b pb-4 text-3xl font-bold tracking-tight mb-4 text-center">
                     My Projects
                 </h2>
                 <p className="text-lg text-muted-foreground mb-10 text-center max-w-2xl mx-auto">

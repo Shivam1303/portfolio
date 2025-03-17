@@ -6,19 +6,37 @@ import { SkillsSection } from "@/components/skills-section";
 import { ProjectsSection } from "@/components/projects-section";
 import { OpenSourceSection } from "@/components/open-source-section";
 import { Footer } from "@/components/footer";
+import { ScrollAnimation } from "@/components/ui/scroll-animation";
+import { fadeInUp, fadeInLeft, fadeInRight, zoomIn } from "@/components/ui/animation-variants";
 
 export default function Home() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex flex-col gap-12 py-16">
+      <main className="flex flex-col gap-16 py-16">
         <HeroSection />
-        <AboutSection />
+
+        <ScrollAnimation variants={fadeInUp}>
+          <AboutSection />
+        </ScrollAnimation>
+
         {/* <EducationSection /> */}
-        <ExperienceSection />
-        <SkillsSection />
-        <ProjectsSection />
-        <OpenSourceSection />
+
+        <ScrollAnimation variants={fadeInUp}>
+          <ExperienceSection />
+        </ScrollAnimation>
+
+        <ScrollAnimation variants={fadeInUp}>
+          <SkillsSection />
+        </ScrollAnimation>
+
+        <ScrollAnimation variants={fadeInUp}>
+          <ProjectsSection />
+        </ScrollAnimation>
+
+        <ScrollAnimation variants={fadeInUp}>
+          <OpenSourceSection />
+        </ScrollAnimation>
       </main>
       <Footer />
     </div>

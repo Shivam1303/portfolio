@@ -9,7 +9,7 @@ export function EducationSection() {
     return (
         <section id="education" className="bg-accent/10">
             <div className="layout-wrapper" ref={containerRef}>
-                <h2 className="text-3xl font-bold tracking-tight mb-12 text-center">
+                <h2 className="text-3xl w-full border-b pb-4 font-bold tracking-tight mb-12 text-center">
                     Education
                 </h2>
 
