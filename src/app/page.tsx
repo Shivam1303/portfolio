@@ -17,25 +17,35 @@ export default function Home() {
         <HeroSection />
 
         <ScrollAnimation variants={fadeInUp}>
-          <AboutSection />
+          <div className="md:min-h-screen">
+            <AboutSection />
+          </div>
         </ScrollAnimation>
 
         {/* <EducationSection /> */}
 
         <ScrollAnimation variants={fadeInUp}>
-          <ExperienceSection />
+          <div className="md:min-h-screen">
+            <ExperienceSection />
+          </div>
         </ScrollAnimation>
 
         <ScrollAnimation variants={fadeInUp}>
-          <SkillsSection />
+          <div className="md:min-h-screen">
+            <SkillsSection />
+          </div>
         </ScrollAnimation>
 
         <ScrollAnimation variants={fadeInUp}>
-          <ProjectsSection />
+          <div className="md:min-h-screen">
+            <ProjectsSection />
+          </div>
         </ScrollAnimation>
 
         <ScrollAnimation variants={fadeInUp}>
-          <OpenSourceSection />
+          <div className="md:min-h-screen">
+            <OpenSourceSection />
+          </div>
         </ScrollAnimation>
       </main>
       <Footer />

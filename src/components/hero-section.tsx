@@ -21,7 +21,7 @@ export function HeroSection() {
     const particlesY = useTransform(scrollY, [0, 500], [0, 150]);
 
     return (
-        <section className="py-20 md:py-28 lg:h-[100vh] relative overflow-hidden flex flex-col justify-center">
+        <section className="py-20 md:py-28 min-h-screen relative overflow-hidden flex flex-col justify-center">
             {/* Particles background with parallax */}
             <motion.div style={{ y: particlesY }}>
                 <Particles
