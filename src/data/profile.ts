@@ -1,5 +1,5 @@
 export const profileData = {
-    name: "SHIVAM TRIVEDI",
+    name: "SHIVAM",
     location: "Vadodara, Gujarat",
     email: "shivamtrivedi1308@gmail.com",
     links: {
