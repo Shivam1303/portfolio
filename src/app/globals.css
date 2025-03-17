@@ -1,26 +1,103 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: hsl(36 33% 97%);
+    --foreground: hsl(240 10% 3.9%);
+    --card: hsl(36 33% 97%);
+    --card-foreground: hsl(240 10% 3.9%);
+    --popover: hsl(36 33% 97%);
+    --popover-foreground: hsl(240 10% 3.9%);
+    --primary: hsl(240 5.9% 10%);
+    --primary-foreground: hsl(36 33% 97%);
+    --secondary: hsl(36 33% 90%);
+    --secondary-foreground: hsl(240 5.9% 10%);
+    --muted: hsl(36 33% 90%);
+    --muted-foreground: hsl(240 3.8% 46.1%);
+    --accent: hsl(36 33% 90%);
+    --accent-foreground: hsl(240 5.9% 10%);
+    --destructive: hsl(0 84.2% 60.2%);
+    --destructive-foreground: hsl(36 33% 97%);
+    --border: hsl(240 5.9% 90%);
+    --input: hsl(240 5.9% 90%);
+    --ring: hsl(240 5.9% 10%);
+    --radius: 0.5rem;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.dark {
+  --background: hsl(240 10% 3.9%);
+  --foreground: hsl(36 33% 97%);
+  --card: hsl(240 10% 3.9%);
+  --card-foreground: hsl(36 33% 97%);
+  --popover: hsl(240 10% 3.9%);
+  --popover-foreground: hsl(36 33% 97%);
+  --primary: hsl(36 33% 97%);
+  --primary-foreground: hsl(240 5.9% 10%);
+  --secondary: hsl(240 3.7% 15.9%);
+  --secondary-foreground: hsl(36 33% 97%);
+  --muted: hsl(240 3.7% 15.9%);
+  --muted-foreground: hsl(240 5% 64.9%);
+  --accent: hsl(240 3.7% 15.9%);
+  --accent-foreground: hsl(36 33% 97%);
+  --destructive: hsl(0 62.8% 30.6%);
+  --destructive-foreground: hsl(36 33% 97%);
+  --border: hsl(240 3.7% 15.9%);
+  --input: hsl(240 3.7% 15.9%);
+  --ring: hsl(36 33% 97%);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  border-color: var(--border);
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  /* Gradient text */
+  .gradient-text {
+    background: linear-gradient(to right, var(--primary), var(--accent-foreground));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+  
+  /* Subtle hover effect for cards */
+  .hover-card {
+    transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+      box-shadow 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  
+  .hover-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dark .hover-card:hover {
+    box-shadow: 0 10px 30px -15px rgba(255, 255, 255, 0.05);
+  }
+  
+  /* Skill tag animation */
+  .skill-tag {
+    transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  
+  .skill-tag:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Section transitions */
+  section {
+    transition: background-color 0.5s ease;
+  }
+  
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+}
+
+.layout-wrapper {
+  @apply mx-auto max-w-4xl px-4 sm:px-6 lg:px-8;
 }
