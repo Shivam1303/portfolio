@@ -1,12 +1,4 @@
-import { Variant } from "framer-motion";
-
-// export const fadeIn = {
-//     hidden: { opacity: 0 },
-//     visible: {
-//         opacity: 1,
-//         transition: { duration: 0.6 }
-//     }
-// };
+// Animation variants for different scroll effects
 
 export const fadeInUp = {
     hidden: { opacity: 0, y: 50 },

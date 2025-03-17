@@ -3,7 +3,7 @@
 import { profileData } from "@/data/profile";
 import Link from "next/link";
 import { Github, Mail } from "lucide-react";
-import { useRef, useEffect } from "react";
+import { useRef } from "react";
 import { Particles } from "./ui/particles";
 import { motion, useScroll, useTransform } from "framer-motion";
 
