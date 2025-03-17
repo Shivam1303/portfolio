@@ -31,7 +31,7 @@ export function HeroSection() {
             <div className="layout-wrapper relative z-10" ref={containerRef}>
                 <div className="flex flex-col items-center text-center">
                     <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6 gradient-text">
-                        Hi, I'm {profileData.name} 👋
+                        Hi, I&apos;m {profileData.name} 👋
                     </h1>
 
                     <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl">

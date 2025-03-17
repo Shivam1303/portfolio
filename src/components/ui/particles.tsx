@@ -91,7 +91,7 @@ export function Particles({
         return () => {
             observer.disconnect();
         };
-    }, [darkModeColor, lightModeColor]);
+    }, [darkModeColor, lightModeColor, isDarkMode]);
 
     useEffect(() => {
         if (canvasRef.current) {
@@ -109,6 +109,7 @@ export function Particles({
             window.removeEventListener("resize", initCanvas);
             window.removeEventListener("mousemove", onMouseMove);
         };
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     useEffect(() => {
@@ -215,7 +216,7 @@ export function Particles({
         }
 
         // Update and draw particles
-        particles.current.forEach((p, i) => {
+        particles.current.forEach((p) => {
             // Move particles
             p.x += p.speedX;
             p.y += p.speedY;
