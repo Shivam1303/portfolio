@@ -3,6 +3,7 @@
 import { profileData } from "@/data/profile";
 import { useRef, useEffect } from "react";
 import { useTheme } from "@/components/theme-provider";
+import Link from "next/link";
 
 export function OpenSourceSection() {
     const containerRef = useRef<HTMLDivElement>(null);
@@ -46,7 +47,16 @@ export function OpenSourceSection() {
                                     <div className="space-y-4">
                                         {contribution.packages.map((pkg, i) => (
                                             <div key={i} className="border-l-2 border-primary pl-4">
-                                                <div className="text-lg font-medium">{pkg.name}</div>
+                                                <div className="text-lg font-medium">
+                                                    <Link
+                                                        href={(pkg as any).link}
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        className="hover:underline"
+                                                    >
+                                                        {pkg.name}
+                                                    </Link>
+                                                </div>
                                                 <div className="text-base text-muted-foreground">{pkg.description}</div>
                                             </div>
                                         ))}

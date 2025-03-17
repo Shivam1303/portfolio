@@ -68,19 +68,23 @@ export const profileData = {
             packages: [
                 {
                     name: "@sliderzz/typify",
-                    description: "Type utilities for deep type management in TypeScript."
+                    description: "Effortlessly convert from javascript to typescript.",
+                    link: "https://www.npmjs.com/package/@sliderzz/typify"
                 },
                 {
                     name: "@sliderzz/fleek-infinite-scroll",
-                    description: "High-performance infinite scrolling for dynamic content."
+                    description: "High-performance infinite scrolling for dynamic content.",
+                    link: "https://www.npmjs.com/package/@sliderzz/fleek-infinite-scroll"
                 },
                 {
                     name: "@sliderzz/fleek-data-table",
-                    description: "Customizable and optimized data table for handling large datasets."
+                    description: "Customizable and optimized data table for handling large datasets.",
+                    link: "https://www.npmjs.com/package/@sliderzz/fleek-data-table"
                 },
                 {
                     name: "@sliderzz/fleek-multistepform",
-                    description: "Smooth multi-step form library with advanced state management."
+                    description: "Smooth multi-step form library with advanced state management.",
+                    link: "https://www.npmjs.com/package/@sliderzz/fleek-multistepform"
                 }
             ]
         }
