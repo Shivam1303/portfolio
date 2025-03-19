@@ -37,6 +37,44 @@ export const profileData = {
       ],
     },
   ],
+  freelancingExperience: [
+    {
+      title: "Internal Portal Development",
+      period: "2024 - 2025",
+      techStack: [
+        "Next.js",
+        "Payload CMS",
+        "Microsoft Authentication",
+        "TypeScript",
+        "Tailwind CSS",
+      ],
+      description:
+        "Developed a comprehensive internal portal solution that streamlines organizational operations",
+      features: [
+        "Document Management System with version control and access permissions",
+        "News and Announcements platform with rich text editing capabilities",
+        "Event Management System with calendar integration",
+        "Secure Microsoft authentication integration for enterprise users",
+        "Multiple frontend landing pages with dynamic content management",
+        "Custom admin dashboard for content management using Payload CMS",
+      ],
+    },
+    {
+      title: "Landing Pages Development",
+      period: "2022 - Present",
+      techStack: ["Next.js", "React", "Node.js", "TypeScript", "Tailwind CSS"],
+      description:
+        "Created high-performance, SEO-optimized landing pages for various clients",
+      features: [
+        "Developed responsive and modern landing pages with optimal performance",
+        "Implemented SEO best practices and meta tag optimization",
+        "Built dynamic content management systems for easy content updates",
+        "Integrated analytics and tracking systems for performance monitoring",
+        "Created reusable component libraries for consistent design",
+        "Optimized images and assets for fast loading times",
+      ],
+    },
+  ],
   education: [
     {
       degree: "B-Tech in Computer Engineering",
