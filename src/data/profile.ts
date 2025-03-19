@@ -5,6 +5,8 @@ export const profileData = {
   links: {
     github: "https://github.com/Shivam1303",
     npm: "https://www.npmjs.com/~sliderzz",
+    linkedin: "https://www.linkedin.com/in/shivam-trivedi-io/",
+    twitter: "https://twitter.com/shivam_trivedi_",
   },
   about: [
     "I'm a software engineer who loves building fast, scalable, and user-friendly applications. Whether it's crafting sleek UIs, optimizing backend performance, or creating reusable component libraries, I thrive on solving real-world problems with code. Passionate about modern JavaScript frameworks and .NET technologies, I'm always experimenting with new tools and ideas.",
