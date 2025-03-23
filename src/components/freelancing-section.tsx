@@ -7,7 +7,7 @@ export function FreelancingSection() {
   const containerRef = useRef<HTMLDivElement>(null);
 
   return (
-    <section id="freelancing" className="">
+    <section id="freelancing">
       <div className="layout-wrapper" ref={containerRef}>
         <h2 className="w-full border-b pb-4 text-3xl font-bold tracking-tight mb-10 text-center">
           Freelance Experience
