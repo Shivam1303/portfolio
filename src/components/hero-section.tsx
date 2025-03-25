@@ -17,7 +17,6 @@ export function HeroSection() {
     const [isMobile, setIsMobile] = useState(false);
 
     const titleY = useTransform(scrollY, [0, 500], [0, 50]);
-    const descriptionY = useTransform(scrollY, [0, 500], [0, 75]);
     const cardsY = useTransform(scrollY, [0, 500], [0, 100]);
     const opacity = useTransform(scrollY, [0, 300], [1, 0]);
 

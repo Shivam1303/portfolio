@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect, useState, useCallback } from "react";
 
 interface Particle {
     x: number;
@@ -93,41 +93,7 @@ export function Particles({
         };
     }, [darkModeColor, lightModeColor, isDarkMode]);
 
-    useEffect(() => {
-        if (canvasRef.current) {
-            context.current = canvasRef.current.getContext("2d");
-        }
-
-        initCanvas();
-        initParticles();
-        animate();
-
-        window.addEventListener("resize", initCanvas);
-        window.addEventListener("mousemove", onMouseMove);
-
-        return () => {
-            window.removeEventListener("resize", initCanvas);
-            window.removeEventListener("mousemove", onMouseMove);
-        };
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
-
-    useEffect(() => {
-        if (refresh) {
-            initParticles();
-        }
-    }, [refresh]);
-
-    // Update particles when theme changes
-    useEffect(() => {
-        if (particles.current.length > 0) {
-            particles.current.forEach(p => {
-                p.color = currentColor;
-            });
-        }
-    }, [currentColor]);
-
-    const initCanvas = () => {
+    const initCanvas = useCallback(() => {
         if (canvasContainerRef.current && canvasRef.current && context.current) {
             canvasSize.current.w = canvasContainerRef.current.offsetWidth;
             canvasSize.current.h = canvasContainerRef.current.offsetHeight;
@@ -140,9 +106,9 @@ export function Particles({
 
             context.current.scale(dpr, dpr);
         }
-    };
+    }, [dpr]);
 
-    const initParticles = () => {
+    const initParticles = useCallback(() => {
         particles.current = [];
 
         for (let i = 0; i < quantity; i++) {
@@ -163,7 +129,7 @@ export function Particles({
                 color: currentColor,
             });
         }
-    };
+    }, [quantity, particleSize, minSpeed, maxSpeed, currentColor]);
 
     const onMouseMove = (e: MouseEvent) => {
         if (canvasContainerRef.current) {
@@ -180,7 +146,7 @@ export function Particles({
         }
     };
 
-    const animate = () => {
+    const animate = useCallback(() => {
         if (!context.current) return;
 
         context.current.clearRect(0, 0, canvasSize.current.w, canvasSize.current.h);
@@ -253,7 +219,40 @@ export function Particles({
         });
 
         requestAnimationFrame(animate);
-    };
+    }, [connectParticles, connectionDistance, connectionOpacity, currentColor, ease, staticity, opacity]);
+
+    useEffect(() => {
+        if (canvasRef.current) {
+            context.current = canvasRef.current.getContext("2d");
+        }
+
+        initCanvas();
+        initParticles();
+        animate();
+
+        window.addEventListener("resize", initCanvas);
+        window.addEventListener("mousemove", onMouseMove);
+
+        return () => {
+            window.removeEventListener("resize", initCanvas);
+            window.removeEventListener("mousemove", onMouseMove);
+        };
+    }, [initCanvas, initParticles, animate]);
+
+    useEffect(() => {
+        if (refresh) {
+            initParticles();
+        }
+    }, [refresh, initParticles]);
+
+    // Update particles when theme changes
+    useEffect(() => {
+        if (particles.current.length > 0) {
+            particles.current.forEach(p => {
+                p.color = currentColor;
+            });
+        }
+    }, [currentColor]);
 
     return (
         <div

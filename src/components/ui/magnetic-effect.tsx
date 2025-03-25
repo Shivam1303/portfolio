@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 
 export function MagneticEffect() {
     useEffect(() => {
@@ -29,14 +29,29 @@ export function MagneticEffect() {
             element.addEventListener("mousemove", moveHandler as EventListener);
             element.addEventListener("mouseleave", leaveHandler);
 
-            (element as any)._magneticMoveHandler = moveHandler;
-            (element as any)._magneticLeaveHandler = leaveHandler;
+            // Store handlers as properties on the element for cleanup
+            interface ExtendedElement extends Element {
+                _magneticMoveHandler?: EventListener;
+                _magneticLeaveHandler?: EventListener;
+            }
+            const extendedElement = element as ExtendedElement;
+            extendedElement._magneticMoveHandler = moveHandler as EventListener;
+            extendedElement._magneticLeaveHandler = leaveHandler;
         });
 
         return () => {
             magneticElements.forEach(element => {
-                element.removeEventListener("mousemove", (element as any)._magneticMoveHandler);
-                element.removeEventListener("mouseleave", (element as any)._magneticLeaveHandler);
+                interface ExtendedElement extends Element {
+                    _magneticMoveHandler?: EventListener;
+                    _magneticLeaveHandler?: EventListener;
+                }
+                const extendedElement = element as ExtendedElement;
+                if (extendedElement._magneticMoveHandler) {
+                    element.removeEventListener("mousemove", extendedElement._magneticMoveHandler);
+                }
+                if (extendedElement._magneticLeaveHandler) {
+                    element.removeEventListener("mouseleave", extendedElement._magneticLeaveHandler);
+                }
             });
         };
     }, []);
