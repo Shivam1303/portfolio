@@ -197,7 +197,7 @@ export function HeroSection() {
 
                     <motion.div
                         className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full max-w-4xl mx-auto mt-8"
-                        style={{ y: cardsY }}
+                        style={{ y: isMobile ? 0 : cardsY }}
                     >
                         <motion.div
                             className="bg-card/30 backdrop-blur-md border border-border rounded-xl p-6 shadow-xl relative overflow-hidden md:col-span-2"
