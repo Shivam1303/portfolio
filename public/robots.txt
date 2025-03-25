@@ -1,0 +1,15 @@
+# Allow all crawlers
+User-agent: *
+Allow: /
+Allow: /#about
+Allow: /#experience
+Allow: /#freelancing
+Allow: /#skills
+Allow: /#projects
+Allow: /#open-source
+
+# Sitemap location
+Sitemap: https://shivamtrivedi.in/sitemap.xml
+
+# Crawl-delay - ensures crawlers don't overload your site
+Crawl-delay: 1 

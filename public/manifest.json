@@ -1,0 +1,16 @@
+{
+  "name": "Shivam Trivedi | Software Engineer",
+  "short_name": "Shivam Trivedi",
+  "description": "Experienced Software Engineer specializing in web development, React, and solving complex technical problems.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0F1729",
+  "theme_color": "#3B82F6",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ]
+}
