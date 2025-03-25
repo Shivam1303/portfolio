@@ -101,3 +101,30 @@ body {
 .layout-wrapper {
   @apply mx-auto max-w-4xl px-4 sm:px-6 lg:px-8;
 }
+/* Custom cursor styles */
+.cursor-active {
+  cursor: none !important;
+}
+
+html:has(.cursor-container),
+body:has(.cursor-container),
+a:has(.cursor-container),
+button:has(.cursor-container),
+[role="button"]:has(.cursor-container) {
+  cursor: none !important;
+}
+
+/* Hover effect for links and buttons with custom cursor */
+a,
+button,
+[role="button"] {
+  position: relative;
+  transition: transform 0.3s ease;
+  z-index: 5;
+}
+
+a:hover,
+button:hover,
+[role="button"]:hover {
+  transform: translateY(-2px);
+}
