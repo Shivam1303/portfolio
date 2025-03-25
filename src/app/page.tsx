@@ -15,7 +15,11 @@ export default function Home() {
     <div className="flex min-h-screen flex-col">
       <Header />
       <main className="flex flex-col gap-16 py-16">
-        <HeroSection />
+        <ScrollAnimation variants={fadeInUp}>
+          <div className="md:min-h-screen">
+            <HeroSection />
+          </div>
+        </ScrollAnimation>
 
         <ScrollAnimation variants={fadeInUp}>
           <div className="md:min-h-screen">
