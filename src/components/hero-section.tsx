@@ -2,7 +2,7 @@
 
 import { profileData } from "@/data/profile";
 import Link from "next/link";
-import { Github, Mail, ArrowDown, Linkedin, Twitter, ExternalLink, Code, Zap } from "lucide-react";
+import { Github, Mail, Linkedin, Twitter, ExternalLink, Code, Zap } from "lucide-react";
 import { useRef, useState, useEffect } from "react";
 import { Particles } from "./ui/particles";
 
@@ -35,21 +35,29 @@ export function HeroSection() {
 
     return (
         <section className="py-20 md:py-28 min-h-screen relative overflow-hidden flex flex-col justify-center">
+            <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
+                <div className="absolute -right-32 top-20 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+                <div className="absolute -left-32 bottom-40 w-80 h-80 bg-blue-500/5 rounded-full blur-3xl"></div>
+                <div className="absolute left-1/3 top-1/4 w-40 h-40 bg-purple-500/5 rounded-full blur-2xl"></div>
+            </div>
+
             <div className="absolute inset-0 opacity-70 z-0">
-                <Particles
-                    quantity={120}
-                    lightModeColor="#141414"
-                    darkModeColor="#ee581b"
-                    particleSize={2}
-                    ease={20}
-                    staticity={40}
+                {!isMobile && (
+                    <Particles
+                        quantity={120}
+                        lightModeColor="#141414"
+                        darkModeColor="#ee581b"
+                        particleSize={2}
+                        ease={20}
+                        staticity={40}
                     opacity={0.5}
                     connectParticles={true}
                     connectionDistance={150}
-                    connectionOpacity={0.1}
-                    minSpeed={0.1}
-                    maxSpeed={0.2}
-                />
+                        connectionOpacity={0.1}
+                        minSpeed={0.1}
+                        maxSpeed={0.2}
+                    />
+                )}
             </div>
 
             <div className="layout-wrapper relative z-10" ref={containerRef}>
@@ -106,7 +114,7 @@ export function HeroSection() {
                             </div>
 
                             <div className="flex flex-wrap gap-2">
-                                {profileData.skills[1].items.slice(0, 6).map((skill, index) => (
+                                {profileData.skills[1].items.slice(0, 6).map((skill) => (
                                     <span
                                         key={skill}
                                         className="px-3 py-1 text-xs font-medium rounded-full bg-background/50 border border-border"
