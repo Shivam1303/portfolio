@@ -63,6 +63,15 @@ export function HeroSection() {
                 duration: 0.5,
                 ease: [0.22, 1, 0.36, 1]
             }
+        }),
+        mobileVisible: (i: number) => ({
+            opacity: 1,
+            y: 0,
+            transition: {
+                delay: 0.4 + (i * 0.15),
+                duration: 0.6,
+                ease: [0.22, 1, 0.36, 1]
+            }
         })
     };
 
@@ -151,7 +160,7 @@ export function HeroSection() {
             <div className="layout-wrapper relative z-10" ref={containerRef}>
                 <motion.div
                     className="flex flex-col items-center text-center select-none"
-                    style={{ y: titleY, opacity }}
+                    style={{ y: isMobile ? 0 : titleY, opacity: isMobile ? 1 : opacity }}
                 >
                     <div className="overflow-hidden mb-8 relative w-full max-w-7xl px-4">
                         <AnimatePresence>
@@ -160,7 +169,7 @@ export function HeroSection() {
                                     {nameLetters.map((letter, i) => (
                                         <motion.span
                                             key={`letter-${i}`}
-                                            className="text-5xl md:text-7xl font-bold tracking-tight gradient-text inline-block"
+                                            className="text-4xl md:text-7xl font-bold tracking-tight gradient-text inline-block"
                                             custom={i}
                                             initial="hidden"
                                             animate="visible"
@@ -198,12 +207,15 @@ export function HeroSection() {
                     <motion.div
                         className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full max-w-4xl mx-auto mt-8"
                         style={{ y: isMobile ? 0 : cardsY }}
+                        initial={isMobile ? { opacity: 0, y: 20 } : {}}
+                        animate={isMobile ? { opacity: 1, y: 0 } : {}}
+                        transition={isMobile ? { duration: 0.6, delay: 0.3 } : {}}
                     >
                         <motion.div
                             className="bg-card/30 backdrop-blur-md border border-border rounded-xl p-6 shadow-xl relative overflow-hidden md:col-span-2"
                             custom={0}
                             initial="hidden"
-                            animate="visible"
+                            animate={isMobile ? "mobileVisible" : "visible"}
                             variants={bentoCardVariants}
                         >
                             <div className="absolute -right-8 -bottom-8 w-32 h-32 bg-primary/5 rounded-full"></div>
@@ -223,7 +235,7 @@ export function HeroSection() {
                             className="bg-card/20 backdrop-blur-md border border-border rounded-xl p-6 shadow-lg relative overflow-hidden"
                             custom={1}
                             initial="hidden"
-                            animate="visible"
+                            animate={isMobile ? "mobileVisible" : "visible"}
                             variants={bentoCardVariants}
                         >
                             <div className="absolute -right-16 -bottom-16 w-32 h-32 bg-blue-500/5 rounded-full"></div>
@@ -258,7 +270,7 @@ export function HeroSection() {
                             className="bg-card/20 backdrop-blur-md border border-border rounded-xl p-6 shadow-lg relative overflow-hidden"
                             custom={2}
                             initial="hidden"
-                            animate="visible"
+                            animate={isMobile ? "mobileVisible" : "visible"}
                             variants={bentoCardVariants}
                         >
                             <div className="absolute -left-16 -bottom-16 w-32 h-32 bg-primary/5 rounded-full"></div>
