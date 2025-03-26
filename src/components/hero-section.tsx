@@ -38,7 +38,7 @@ export function HeroSection() {
             {!isMobile && (
                 <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
                     <div className="absolute -right-32 top-20 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
-                <div className="absolute -left-32 bottom-40 w-80 h-80 bg-blue-500/5 rounded-full blur-3xl"></div>
+                    <div className="absolute -left-32 bottom-40 w-80 h-80 bg-blue-500/5 rounded-full blur-3xl"></div>
                     <div className="absolute left-1/3 top-1/4 w-40 h-40 bg-purple-500/5 rounded-full blur-2xl"></div>
                 </div>
             )}
@@ -52,9 +52,9 @@ export function HeroSection() {
                         particleSize={2}
                         ease={20}
                         staticity={40}
-                    opacity={0.5}
-                    connectParticles={true}
-                    connectionDistance={150}
+                        opacity={0.5}
+                        connectParticles={true}
+                        connectionDistance={150}
                         connectionOpacity={0.1}
                         minSpeed={0.1}
                         maxSpeed={0.2}
