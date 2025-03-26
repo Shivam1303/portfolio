@@ -1,18 +1,13 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Work_Sans } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ScrollProgress } from "@/components/scroll-progress";
 import { StructuredData } from "@/components/structured-data";
 import { sharedMetadata } from "./metadata";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const workSans = Work_Sans({
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  variable: "--font-work-sans",
 });
 
 export const metadata = sharedMetadata;
@@ -33,11 +28,11 @@ export default function RootLayout({
         <link rel="manifest" href="/fav/site.webmanifest" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden`}
+        className={`${workSans.variable} antialiased overflow-x-hidden`}
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
         >
