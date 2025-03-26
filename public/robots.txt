@@ -9,7 +9,7 @@ Allow: /#projects
 Allow: /#open-source
 
 # Sitemap location
-Sitemap: https://shivamtrivedi.in/sitemap.xml
+Sitemap: https://shivamtrivedi.in/sitemap
 
 # Crawl-delay - ensures crawlers don't overload your site
 Crawl-delay: 1 
