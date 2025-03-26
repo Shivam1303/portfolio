@@ -32,25 +32,25 @@ export function Header() {
             className={cn(
                 "fixed top-0 z-50 w-full transition-all duration-300",
                 scrolled
-                    ? "bg-background/90 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border/20"
+                    ? "bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border/40"
                     : "bg-transparent"
             )}
         >
             <div className="layout-wrapper">
-                <div className="flex h-16 md:h-20 items-center justify-between">
-                    <Link href="/" className="font-medium text-lg tracking-tight">
+                <div className="flex h-16 items-center justify-between">
+                    <Link href="/" className="font-bold text-xl">
                         ST
                     </Link>
 
                     {/* Desktop navigation */}
-                    <nav className="hidden md:flex items-center gap-10">
+                    <nav className="hidden md:flex items-center gap-8">
                         {navItems.map((item) => (
                             <Link
                                 key={item.href}
                                 href={item.href}
                                 className={cn(
                                     "text-sm font-medium transition-colors hover:text-primary",
-                                    "text-foreground/90"
+                                    "text-foreground/70"
                                 )}
                             >
                                 {item.label}
@@ -64,7 +64,7 @@ export function Header() {
                         <ThemeToggle />
                         <button
                             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                            className="inline-flex items-center justify-center rounded-full p-2 text-foreground/80 hover:text-foreground transition-colors"
+                            className="inline-flex items-center justify-center rounded-full p-2 text-foreground/60 hover:bg-accent hover:text-foreground"
                             aria-label="Toggle menu"
                         >
                             {mobileMenuOpen ? (
@@ -79,7 +79,7 @@ export function Header() {
 
             {/* Mobile navigation */}
             {mobileMenuOpen && (
-                <div className="md:hidden bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80 border-b border-border/20">
+                <div className="md:hidden bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80 border-b border-border/40">
                     <div className="layout-wrapper py-4 space-y-4">
                         {navItems.map((item) => (
                             <Link
@@ -88,7 +88,7 @@ export function Header() {
                                 onClick={() => setMobileMenuOpen(false)}
                                 className={cn(
                                     "block py-2 text-base font-medium transition-colors hover:text-primary",
-                                    "text-foreground/80"
+                                    "text-foreground/70"
                                 )}
                             >
                                 {item.label}
