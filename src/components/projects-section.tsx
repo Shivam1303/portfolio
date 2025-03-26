@@ -4,6 +4,7 @@ import { profileData } from "@/data/profile";
 import Link from "next/link";
 import { ExternalLink } from "lucide-react";
 import { useRef } from "react";
+import Image from "next/image";
 
 export function ProjectsSection() {
     const containerRef = useRef<HTMLDivElement>(null);
@@ -18,26 +19,35 @@ export function ProjectsSection() {
                     Check out my latest work
                 </p>
 
-                <div className="flex flex-col gap-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {profileData.projects.map((project, index) => (
-                        <div key={index} className="space-y-2">
-                            <h3 className="text-2xl font-semibold">{project.title}</h3>
-                            <p className="text-lg text-muted-foreground">{project.description}</p>
-                            {project.link && (
-                                <Link
-                                    href={project.link.url}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="inline-flex items-center text-base font-medium text-primary hover:underline mt-1"
-                                >
-                                    {project.link.text}
-                                    <ExternalLink className="ml-1 h-4 w-4" />
-                                </Link>
-                            )}
-
-                            {index < profileData.projects.length - 1 && (
-                                <div className="pt-6 mt-6 border-t border-border/30"></div>
-                            )}
+                        <div
+                            key={index}
+                            className="group relative overflow-hidden rounded-lg border bg-background p-2 hover:shadow-lg transition-shadow"
+                        >
+                            <div className="relative aspect-video w-full overflow-hidden rounded-md">
+                                <Image
+                                    src={project.image}
+                                    alt={project.title}
+                                    fill
+                                    className="object-contain transition-transform group-hover:scale-105"
+                                />
+                            </div>
+                            <div className="p-4">
+                                <h3 className="text-2xl font-semibold mb-2">{project.title}</h3>
+                                <p className="text-muted-foreground mb-4">{project.description}</p>
+                                {project.link && (
+                                    <Link
+                                        href={project.link.url}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-flex items-center text-base font-medium text-primary hover:underline"
+                                    >
+                                        {project.link.text}
+                                        <ExternalLink className="ml-1 h-4 w-4" />
+                                    </Link>
+                                )}
+                            </div>
                         </div>
                     ))}
                 </div>

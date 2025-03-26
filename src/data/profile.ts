@@ -151,15 +151,27 @@ export const profileData = {
       title: 'Typify (TypeScript Utility Library)',
       description:
         'Designed and published a type utility library for TypeScript, simplifying deep object type management. Provides schema validation, deep type transformations, and type utilities, improving developer experience in TypeScript projects.',
+      image: '/projects/typify.png',
       link: {
         url: 'https://www.npmjs.com/package/@sliderzz/typify',
         text: 'NPM',
       },
     },
     {
+      title: 'Playlist Heaven',
+      description:
+        "Developed an AI-powered playlist generator that analyzes your Spotify listening history and music preferences to create personalized playlists. By understanding your taste in music, favorite artists, and listening patterns, it generates mood-based playlists that perfectly match your style while introducing you to new tracks you'll love.",
+      image: '/projects/playlist-heaven.png',
+      link: {
+        url: 'https://github.com/Shivam1303/spotify-ai-playlist',
+        text: 'GitHub',
+      },
+    },
+    {
       title: 'URL Shortener',
       description:
         'Built a URL shortening service using Node.js and MySQL, optimizing query performance by 30%.',
+      image: '/projects/url-shortener.png',
       link: {
         url: 'https://github.com/Shivam1303/url-shortener',
         text: 'GitHub',
