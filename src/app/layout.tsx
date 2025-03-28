@@ -15,7 +15,12 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata = sharedMetadata;
+export const metadata = {
+  ...sharedMetadata,
+  alternates: {
+    canonical: "https://shivamtrivedi.in",
+  },
+};
 
 export default function RootLayout({
   children,

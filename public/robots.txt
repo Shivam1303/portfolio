@@ -7,9 +7,15 @@ Allow: /#freelancing
 Allow: /#skills
 Allow: /#projects
 Allow: /#open-source
+Allow: /project/
+Allow: /resume
+Allow: /contact
 
-# Sitemap location
+# Sitemap locations
 Sitemap: https://shivamtrivedi.in/sitemap.xml
 
 # Crawl-delay - ensures crawlers don't overload your site
-Crawl-delay: 1 
+Crawl-delay: 1
+
+# Host directive for search engines
+Host: https://shivamtrivedi.in 

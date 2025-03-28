@@ -141,7 +141,7 @@ export const sharedMetadata: Metadata = {
   },
   verification: {
     // Add your verification codes when available
-    // google: 'your-google-verification-code',
+    google: 'google8b9aa456a2ed1bf0',
     // yandex: 'your-yandex-verification-code',
   },
   category: 'technology',
