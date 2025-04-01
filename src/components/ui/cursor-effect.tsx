@@ -21,7 +21,7 @@ interface CursorEffectProps {
     opacity?: number;
 }
 
-export function CursorEffect({
+export const CursorEffect = ({
     quantity = 30,
     interactionDistance = 120,
     maxSpeed = 3,
@@ -29,7 +29,7 @@ export function CursorEffect({
     maxSize = 5,
     colors = ["#ee581b", "#313bac", "#e4e4e4"],
     opacity = 0.6,
-}: CursorEffectProps) {
+}: CursorEffectProps) => {
     const canvasRef = useRef<HTMLCanvasElement>(null);
     const [mousePosition, setMousePosition] = useState({ x: -100, y: -100 });
     const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
@@ -183,4 +183,4 @@ export function CursorEffect({
             className="absolute inset-0 w-full h-full pointer-events-none z-0"
         />
     );
-} 
+}; 

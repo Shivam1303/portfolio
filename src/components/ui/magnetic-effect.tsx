@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 
-export function MagneticEffect() {
+export const MagneticEffect = () => {
     useEffect(() => {
         const magneticElements = document.querySelectorAll('a, button, [role="button"]');
         const magneticStrength = 0.5;

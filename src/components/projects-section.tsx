@@ -6,52 +6,59 @@ import { ExternalLink } from "lucide-react";
 import { useRef } from "react";
 import Image from "next/image";
 
-export function ProjectsSection() {
-    const containerRef = useRef<HTMLDivElement>(null);
+export const ProjectsSection = () => {
+  const containerRef = useRef<HTMLDivElement>(null);
 
-    return (
-        <section id="projects" className="">
-            <div className="layout-wrapper" ref={containerRef}>
-                <h2 className="w-full border-b pb-4 text-3xl font-bold tracking-tight mb-4 text-center">
-                    My Projects
-                </h2>
-                <p className="text-lg text-muted-foreground mb-10 text-center max-w-2xl mx-auto">
-                    Check out my latest work
-                </p>
+  return (
+    <section
+      id="projects"
+      className="bg-gradient-to-b from-background via-secondary/10 to-background py-20"
+    >
+      <div
+        className="layout-wrapper"
+        ref={containerRef}
+      >
+        <div className="max-w-3xl mx-auto mb-16 text-center">
+          <h2 className="section-title">Featured Projects</h2>
+          <p className="section-subtitle">Some of my best work</p>
+        </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    {profileData.projects.map((project, index) => (
-                        <div
-                            key={index}
-                            className="group relative overflow-hidden rounded-lg border bg-background p-2 hover:shadow-lg transition-shadow"
-                        >
-                            <div className="relative aspect-video w-full overflow-hidden rounded-md">
-                                <Image
-                                    src={project.image}
-                                    alt={project.title}
-                                    fill
-                                    className="object-contain transition-transform group-hover:scale-105"
-                                />
-                            </div>
-                            <div className="p-4">
-                                <h3 className="text-2xl font-semibold mb-2">{project.title}</h3>
-                                <p className="text-muted-foreground mb-4">{project.description}</p>
-                                {project.link && (
-                                    <Link
-                                        href={project.link.url}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="inline-flex items-center text-base font-medium text-primary hover:underline"
-                                    >
-                                        {project.link.text}
-                                        <ExternalLink className="ml-1 h-4 w-4" />
-                                    </Link>
-                                )}
-                            </div>
-                        </div>
-                    ))}
-                </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {profileData.projects.map((project, index) => (
+            <div
+              key={index}
+              className="group relative overflow-hidden rounded-2xl border border-border/50 bg-secondary/20 hover:border-primary/50 hover:bg-secondary/30 transition-all"
+            >
+              <div className="relative aspect-video w-full overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity z-10"></div>
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+              </div>
+              <div className="relative p-6">
+                <h3 className="text-2xl font-semibold mb-3 group-hover:text-primary transition-colors">
+                  {project.title}
+                </h3>
+                <p className="text-muted-foreground mb-4 line-clamp-2">{project.description}</p>
+                {project.link && (
+                  <Link
+                    href={project.link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-base font-medium text-primary hover:text-primary/80 transition-colors"
+                  >
+                    {project.link.text}
+                    <ExternalLink className="ml-1 h-4 w-4" />
+                  </Link>
+                )}
+              </div>
             </div>
-        </section>
-    );
-} 
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}; 

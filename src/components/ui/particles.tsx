@@ -28,7 +28,7 @@ interface ParticlesProps {
     connectionOpacity?: number;
 }
 
-export function Particles({
+export const Particles = ({
     className = "",
     quantity = 100,
     staticity = 50,
@@ -43,7 +43,7 @@ export function Particles({
     connectParticles = true,
     connectionDistance = 100,
     connectionOpacity = 0.25,
-}: ParticlesProps) {
+}: ParticlesProps) => {
     const canvasRef = useRef<HTMLCanvasElement>(null);
     const canvasContainerRef = useRef<HTMLDivElement>(null);
     const context = useRef<CanvasRenderingContext2D | null>(null);

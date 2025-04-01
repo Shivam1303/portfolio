@@ -8,10 +8,10 @@ interface CursorProps {
     size?: number;
 }
 
-export function CustomCursor({
+export const CustomCursor = ({
     color = "#ee581b",
     size = 32,
-}: CursorProps) {
+}: CursorProps) => {
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
     const [isActive, setIsActive] = useState(false);
 

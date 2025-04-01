@@ -3,7 +3,7 @@
 import { profileData } from "@/data/profile";
 import { useRef } from "react";
 
-export function EducationSection() {
+export const EducationSection = () => {
     const containerRef = useRef<HTMLDivElement>(null);
 
     return (

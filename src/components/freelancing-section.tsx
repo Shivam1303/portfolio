@@ -3,60 +3,78 @@
 import { profileData } from "@/data/profile";
 import { useRef } from "react";
 
-export function FreelancingSection() {
+export const FreelancingSection = () => {
   const containerRef = useRef<HTMLDivElement>(null);
 
   return (
-    <section id="freelancing">
-      <div className="layout-wrapper" ref={containerRef}>
-        <h2 className="w-full border-b pb-4 text-3xl font-bold tracking-tight mb-10 text-center">
-          Freelance Experience
-        </h2>
-        <p className="text-lg text-muted-foreground mb-10 text-center max-w-2xl mx-auto">
-          Independent projects and client work
-        </p>
+    <section
+      id="freelancing"
+      className="bg-gradient-to-b from-background via-secondary/10 to-background py-20"
+    >
+      <div
+        className="layout-wrapper"
+        ref={containerRef}
+      >
+        <div className="max-w-3xl mx-auto mb-16 text-center">
+          <h2 className="section-title">Freelance Work</h2>
+          <p className="section-subtitle">Independent projects and client collaborations</p>
+        </div>
 
-        <div className="flex flex-col gap-10">
+        <div className="grid grid-cols-1 gap-8">
           {profileData.freelancingExperience.map((project, index) => (
-            <div key={index} className="space-y-3">
-              <div className="flex flex-col gap-1">
-                <h3 className="text-2xl font-semibold">{project.title}</h3>
-                <span className="text-muted-foreground text-sm">
-                  {project.period}
-                </span>
+            <div
+              key={index}
+              className="group relative overflow-hidden rounded-2xl border border-border/50 bg-secondary/20 p-8 hover:border-primary/50 hover:bg-secondary/30 transition-all"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+
+              <div className="relative space-y-6">
+                <div>
+                  <div className="flex flex-wrap gap-2 items-start justify-between mb-4">
+                    <h3 className="text-2xl font-semibold group-hover:text-primary transition-colors">
+                      {project.title}
+                    </h3>
+                    <span className="px-3 py-1 text-sm text-primary bg-primary/10 rounded-full">
+                      {project.period}
+                    </span>
+                  </div>
+                  <p className="text-lg text-muted-foreground">{project.description}</p>
+                </div>
+
+                <div className="flex flex-wrap gap-2">
+                  {project.techStack.map((tech, i) => (
+                    <span
+                      key={i}
+                      className="px-3 py-1.5 rounded-full text-sm font-medium bg-primary/10 text-primary backdrop-blur-sm"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+
+                <div className="space-y-3 border-t border-border/50 pt-6">
+                  <h4 className="text-lg font-medium text-foreground/90 mb-4">
+                    Key Features & Achievements
+                  </h4>
+                  <ul className="grid gap-3">
+                    {project.features.map((feature, i) => (
+                      <li
+                        key={i}
+                        className="relative flex gap-3 text-muted-foreground group/item"
+                      >
+                        <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary"></span>
+                        <p className="text-base leading-relaxed group-hover/item:text-foreground transition-colors">
+                          {feature}
+                        </p>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
-
-              <div className="flex flex-wrap gap-2">
-                {project.techStack.map((tech, i) => (
-                  <span
-                    key={i}
-                    className="px-2 py-1 bg-primary/10 text-primary rounded-md text-sm"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-
-              <p className="text-lg text-muted-foreground">
-                {project.description}
-              </p>
-
-              <ul className="space-y-2 mt-3">
-                {project.features.map((feature, i) => (
-                  <li key={i} className="relative pl-6">
-                    <span className="absolute left-0 top-2.5 w-2 h-2 bg-primary rounded-full" />
-                    <p className="text-lg text-muted-foreground">{feature}</p>
-                  </li>
-                ))}
-              </ul>
-
-              {index < profileData.freelancingExperience.length - 1 && (
-                <div className="pt-6 mt-6 border-t border-border/30"></div>
-              )}
             </div>
           ))}
         </div>
       </div>
     </section>
   );
-}
+};

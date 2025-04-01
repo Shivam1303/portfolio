@@ -1,7 +1,7 @@
 import React from 'react';
 import { profileData } from '@/data/profile';
 
-export function StructuredData() {
+export const StructuredData = () => {
     // Get social media links from profile data
     const { github, linkedin, twitter, npm } = profileData.links;
 

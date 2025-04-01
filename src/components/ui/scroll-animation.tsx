@@ -26,13 +26,13 @@ const defaultVariants = {
     }
 };
 
-export function ScrollAnimation({
+export const ScrollAnimation = ({
     children,
     variants = defaultVariants,
     className = "",
     viewportAmount = 0.2,
     delay = 0
-}: ScrollAnimationProps) {
+}: ScrollAnimationProps) => {
     const controls = useAnimation();
     const ref = useRef<HTMLDivElement>(null);
     const isInView = useInView(ref, { amount: viewportAmount, once: true });
@@ -58,11 +58,11 @@ export function ScrollAnimation({
     );
 }
 
-export function StaggeredScrollAnimation({
+export const StaggeredScrollAnimation = ({
     children,
     staggerDelay = 0.1,
     ...props
-}: ScrollAnimationProps & { staggerDelay?: number; }) {
+}: ScrollAnimationProps & { staggerDelay?: number; }) => {
     return (
         <>
             {Array.isArray(children) ?
