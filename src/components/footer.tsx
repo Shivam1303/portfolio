@@ -1,24 +1,27 @@
-"use client";
+'use client';
 
-import { profileData } from "@/data/profile";
-import Link from "next/link";
-import { Github, Mail, Linkedin, Twitter, Heart } from "lucide-react";
+import { profileData } from '@/data/profile';
+import Link from 'next/link';
+import { Github, Mail, Linkedin, Twitter, Heart } from 'lucide-react';
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
   const navItems = [
-    { href: "#about", label: "About" },
-    { href: "#experience", label: "Experience" },
-    { href: "#skills", label: "Skills" },
-    { href: "#projects", label: "Projects" },
-    { href: "#contact", label: "Contact" },
+    { href: '#about', label: 'About' },
+    { href: '#experience', label: 'Experience' },
+    { href: '#skills', label: 'Skills' },
+    { href: '#projects', label: 'Projects' },
+    { href: '#contact', label: 'Contact' },
   ];
 
   return (
     <footer className="border-t border-border/10 py-16 mt-16 bg-background/30 backdrop-blur-sm">
       <div className="layout-wrapper">
         <div className="flex flex-col md:flex-row items-center justify-between mb-12 gap-8">
-          <Link href="/" className="text-2xl font-bold">
+          <Link
+            href="/"
+            className="text-2xl font-bold"
+          >
             <span className="gradient-text">ST</span>
           </Link>
 
@@ -93,4 +96,4 @@ export const Footer = () => {
       </div>
     </footer>
   );
-} 
+};

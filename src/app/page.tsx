@@ -6,7 +6,6 @@ import { SkillsSection } from '@/components/skills-section';
 import { ProjectsSection } from '@/components/projects-section';
 import { OpenSourceSection } from '@/components/open-source-section';
 import { ContactSection } from '@/components/contact-section';
-import { Footer } from '@/components/Footer';
 import { ScrollAnimation } from '@/components/ui/scroll-animation';
 import { fadeInUp } from '@/components/ui/animation-variants';
 
@@ -45,7 +44,6 @@ export default function Home() {
           <ContactSection />
         </div>
       </main>
-      <Footer />
     </div>
   );
 }
