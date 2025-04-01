@@ -6,6 +6,7 @@ import { profileData } from '@/data/profile';
 
 export const ContactSection = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [result, setResult] = useState('');
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -15,10 +16,41 @@ export const ContactSection = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    // Add your form submission logic here
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    setIsSubmitting(false);
-    setFormData({ name: '', email: '', message: '' });
+    setResult('');
+
+    try {
+      // Use the existing formData state object
+      const payload = {
+        access_key: 'd210c4dd-08a9-49e9-b4ba-aa1408a79806',
+        name: formData.name,
+        email: formData.email,
+        message: formData.message,
+      };
+
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify(payload),
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setResult('Form Submitted Successfully');
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        console.log('Error', data);
+        setResult(data.message);
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setResult('Something went wrong. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -110,6 +142,7 @@ export const ContactSection = () => {
                   <input
                     type="text"
                     id="name"
+                    name="name"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     className="w-full px-4 py-3 rounded-xl bg-secondary/50 border border-border/50 focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-colors"
@@ -126,6 +159,7 @@ export const ContactSection = () => {
                   <input
                     type="email"
                     id="email"
+                    name="email"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     className="w-full px-4 py-3 rounded-xl bg-secondary/50 border border-border/50 focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-colors"
@@ -141,6 +175,7 @@ export const ContactSection = () => {
                   </label>
                   <textarea
                     id="message"
+                    name="message"
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     className="w-full px-4 py-3 rounded-xl bg-secondary/50 border border-border/50 focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-colors min-h-[120px] resize-none"
@@ -148,6 +183,18 @@ export const ContactSection = () => {
                   ></textarea>
                 </div>
               </div>
+
+              {result && (
+                <div
+                  className={`mt-4 p-3 rounded-xl ${
+                    result.includes('Success')
+                      ? 'bg-green-100 text-green-800'
+                      : 'bg-red-100 text-red-800'
+                  }`}
+                >
+                  {result}
+                </div>
+              )}
 
               <button
                 type="submit"

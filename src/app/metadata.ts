@@ -114,7 +114,7 @@ export const sharedMetadata: Metadata = {
     siteName: 'Shivam Trivedi - Software Engineer & Freelance Developer',
     images: [
       {
-        url: '/og-image.png',
+        url: '/og-image.webp',
         width: 1200,
         height: 630,
         alt: 'Shivam Trivedi - Software Engineer & Freelance Developer',
@@ -126,7 +126,7 @@ export const sharedMetadata: Metadata = {
     title: 'Shivam Trivedi | Software Engineer & Freelance Developer',
     description: `${profileData.about[0]} Available for freelance projects and full-time opportunities. Based in ${profileData.location}.`,
     creator: '@io_shivam',
-    images: ['/og-image.png'],
+    images: ['/og-image.webp'],
   },
   robots: {
     index: true,
