@@ -8,6 +8,7 @@ import { OpenSourceSection } from '@/components/open-source-section';
 import { ContactSection } from '@/components/contact-section';
 import { ScrollAnimation } from '@/components/ui/scroll-animation';
 import { fadeInUp } from '@/components/ui/animation-variants';
+import { Footer } from '@/components/footer';
 
 export default function Home() {
   return (
@@ -44,6 +45,7 @@ export default function Home() {
           <ContactSection />
         </div>
       </main>
+      <Footer />
     </div>
   );
 }
