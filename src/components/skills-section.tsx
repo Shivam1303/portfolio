@@ -1,7 +1,6 @@
 "use client";
 
-import { profileData } from "@/data/profile";
-import { cn } from "@/lib/utils";
+import { profileData } from '@/data/profile';
 import { useEffect, useRef } from "react";
 
 export const SkillsSection = () => {

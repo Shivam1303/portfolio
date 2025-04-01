@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Send, Mail, MapPin, Phone, Github, Linkedin, Twitter } from 'lucide-react';
+import { Send, Mail, MapPin, Github, Linkedin, Twitter } from 'lucide-react';
 import { profileData } from '@/data/profile';
 
 export const ContactSection = () => {
@@ -36,7 +36,7 @@ export const ContactSection = () => {
       <div className="relative layout-wrapper">
         <div className="max-w-3xl mx-auto mb-16 text-center">
           <h2 className="section-title">Get In Touch</h2>
-          <p className="section-subtitle">Let's create something amazing together</p>
+          <p className="section-subtitle">Let&apos;s create something amazing together</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">

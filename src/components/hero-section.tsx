@@ -10,7 +10,7 @@ import { useTheme } from './theme-provider';
 export const HeroSection = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-  const { theme } = useTheme();
+  useTheme();
 
   useEffect(() => {
     const timeout = setTimeout(() => setIsLoaded(true), 100);
