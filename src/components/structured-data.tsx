@@ -116,6 +116,70 @@ export const StructuredData = () => {
         ]
     };
 
+    // Website schema
+    const websiteSchema = {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Shivam Trivedi | Software Engineer & Freelance Developer",
+        "alternateName": "Shivam Trivedi Portfolio",
+        "url": "https://shivamtrivedi.in",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://shivamtrivedi.in#search={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    };
+
+    // BreadcrumbList schema
+    const breadcrumbSchema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://shivamtrivedi.in"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "About",
+                "item": "https://shivamtrivedi.in/#about"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Experience",
+                "item": "https://shivamtrivedi.in/#experience"
+            },
+            {
+                "@type": "ListItem",
+                "position": 4,
+                "name": "Freelancing",
+                "item": "https://shivamtrivedi.in/#freelancing"
+            },
+            {
+                "@type": "ListItem",
+                "position": 5,
+                "name": "Skills",
+                "item": "https://shivamtrivedi.in/#skills"
+            },
+            {
+                "@type": "ListItem",
+                "position": 6,
+                "name": "Projects",
+                "item": "https://shivamtrivedi.in/#projects"
+            },
+            {
+                "@type": "ListItem",
+                "position": 7,
+                "name": "Open Source",
+                "item": "https://shivamtrivedi.in/#open-source"
+            }
+        ]
+    };
+
     return (
         <>
             <script
@@ -125,6 +189,14 @@ export const StructuredData = () => {
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
             />
         </>
     );
