@@ -37,11 +37,18 @@ const freelancingKeywords = [
 ];
 
 const projectKeywords = [
-  'portfolio website',
-  'software projects',
-  'open source contributor',
-  'NPM package developer',
-  'UI component library',
+  "portfolio website",
+  "software projects",
+  "open source contributor",
+  "NPM package developer",
+  "UI component library",
+  "TypeScript utility library",
+  "Typify NPM package",
+  "Fleek UI components",
+  "Spotify AI playlist generator",
+  "URL shortener project",
+  "React developer portfolio",
+  "Next.js portfolio site",
 ];
 
 // Location-specific keywords
