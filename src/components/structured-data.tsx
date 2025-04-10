@@ -142,7 +142,7 @@ export const StructuredData = () => {
         {
           '@type': 'OfferCatalog',
           name: 'Web Development Services',
-          itemListElement: profileData.freelancingExperience.map((exp, index) => ({
+          itemListElement: profileData.freelancingExperience.map((exp) => ({
             '@type': 'Offer',
             itemOffered: {
               '@type': 'Service',

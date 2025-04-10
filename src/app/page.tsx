@@ -1,6 +1,5 @@
 import { Header } from "@/components/header";
 import { HeroSection } from '@/components/hero-section';
-import { ExperienceSection } from '@/components/experience-section';
 import { FreelancingSection } from '@/components/freelancing-section';
 import { SkillsSection } from '@/components/skills-section';
 import { ProjectsSection } from '@/components/projects-section';
