@@ -151,6 +151,246 @@ export const StructuredData = () => {
             },
           })),
         },
+        {
+          '@type': 'OfferCatalog',
+          name: 'IT Consulting Services',
+          itemListElement: [
+            {
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'Service',
+                name: 'Technology Stack Consultation',
+                description: 'Expert advice on selecting the right technologies for your project needs.',
+              },
+            },
+            {
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'Service',
+                name: 'Digital Transformation Strategy',
+                description: 'Comprehensive strategies to modernize your business through technology.',
+              },
+            },
+            {
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'Service',
+                name: 'Technical Project Planning',
+                description: 'Detailed roadmaps and requirements gathering for successful project implementation.',
+              },
+            },
+          ],
+        },
+        {
+          '@type': 'OfferCatalog',
+          name: 'UI/UX Implementation Services',
+          itemListElement: [
+            {
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'Service',
+                name: 'Component Library Development',
+                description: 'Custom, reusable UI components that ensure consistency across your applications.',
+              },
+            },
+            {
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'Service',
+                name: 'Responsive Interface Implementation',
+                description: 'Pixel-perfect implementation of designs that work flawlessly across all devices.',
+              },
+            },
+            {
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'Service',
+                name: 'Accessibility Compliance',
+                description: 'Making your web applications accessible to all users including those with disabilities.',
+              },
+            },
+          ],
+        },
+        {
+          '@type': 'OfferCatalog',
+          name: 'Performance Optimization Services',
+          itemListElement: [
+            {
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'Service',
+                name: 'Web Application Speed Optimization',
+                description: 'Improving load times and runtime performance of your web applications.',
+              },
+            },
+            {
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'Service',
+                name: 'Database Query Optimization',
+                description: 'Enhancing database performance through optimized queries and indexing strategies.',
+              },
+            },
+            {
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'Service',
+                name: 'Code Refactoring',
+                description: 'Restructuring existing code to improve performance without changing functionality.',
+              },
+            },
+          ],
+        },
+        {
+          '@type': 'OfferCatalog',
+          name: 'E-commerce Solutions',
+          itemListElement: [
+            {
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'Service',
+                name: 'Custom E-commerce Development',
+                description: 'Tailored online stores built with modern frameworks like React and Next.js.',
+              },
+            },
+            {
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'Service',
+                name: 'Payment Gateway Integration',
+                description: 'Secure implementation of payment processing systems for your online business.',
+              },
+            },
+            {
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'Service',
+                name: 'E-commerce Performance Optimization',
+                description: 'Speed and conversion optimization specifically for online stores and marketplaces.',
+              },
+            },
+          ],
+        },
+        {
+          '@type': 'OfferCatalog',
+          name: 'AI Integration Services',
+          itemListElement: [
+            {
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'Service',
+                name: 'AI-Powered Application Development',
+                description: 'Integrating artificial intelligence capabilities into new and existing applications.',
+              },
+            },
+            {
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'Service',
+                name: 'ChatGPT & LLM Integration',
+                description: 'Implementing conversational AI and large language models into your business applications.',
+              },
+            },
+            {
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'Service',
+                name: 'AI-Enhanced User Experience',
+                description: 'Leveraging machine learning to create personalized, intelligent user interfaces.',
+              },
+            },
+          ],
+        },
+        {
+          '@type': 'OfferCatalog',
+          name: 'Automation Solutions',
+          itemListElement: [
+            {
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'Service',
+                name: 'Business Process Automation',
+                description: 'Custom software solutions to automate repetitive business tasks and workflows.',
+              },
+            },
+            {
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'Service',
+                name: 'CI/CD Pipeline Implementation',
+                description: 'Setting up automated testing and deployment pipelines for software projects.',
+              },
+            },
+            {
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'Service',
+                name: 'RPA (Robotic Process Automation)',
+                description: 'Building bots and scripts to automate manual, repetitive digital tasks.',
+              },
+            },
+          ],
+        },
+        {
+          '@type': 'OfferCatalog',
+          name: 'Web Applications Development',
+          itemListElement: [
+            {
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'Service',
+                name: 'SaaS Application Development',
+                description: 'Building cloud-based software-as-a-service applications with subscription models.',
+              },
+            },
+            {
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'Service',
+                name: 'Progressive Web Apps (PWA)',
+                description: 'Creating fast, reliable web applications that work offline and feel like native apps.',
+              },
+            },
+            {
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'Service',
+                name: 'Interactive Dashboard Development',
+                description: 'Building data visualization dashboards with real-time analytics capabilities.',
+              },
+            },
+          ],
+        },
+        {
+          '@type': 'OfferCatalog',
+          name: 'Full Stack Software Development',
+          itemListElement: [
+            {
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'Service',
+                name: 'End-to-End Application Development',
+                description: 'Comprehensive development from database design to frontend implementation.',
+              },
+            },
+            {
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'Service',
+                name: 'API Development & Integration',
+                description: 'Building RESTful and GraphQL APIs that connect your systems and services.',
+              },
+            },
+            {
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'Service',
+                name: 'Microservices Architecture',
+                description: 'Designing and implementing scalable, maintainable microservices-based applications.',
+              },
+            },
+          ],
+        }
       ],
     },
   };
