@@ -41,14 +41,14 @@ export const profileData = {
         "Tailwind CSS",
       ],
       description:
-        "Developed a comprehensive internal portal solution that streamlines organizational operations, boosting team efficiency by 35%",
+        "Architected and delivered a unified internal portal, enhancing cross-departmental collaboration and boosting operational efficiency by 35%",
       features: [
-        "Document Management System with version control and access permissions",
-        "News and Announcements platform with rich text editing capabilities",
-        "Event Management System with calendar integration",
-        "Secure Microsoft authentication integration for enterprise users",
-        "Multiple frontend landing pages with dynamic content management",
-        "Custom admin dashboard for content management using Payload CMS",
+        "Implemented secure, version-controlled document management with granular access controls",
+        "Deployed a dynamic news/announcements platform with an intuitive rich text editor",
+        "Integrated an event management system with seamless calendar synchronization",
+        "Enabled secure enterprise access via Microsoft Authentication protocols",
+        "Developed dynamic, CMS-driven landing pages for targeted internal communication",
+        "Created a custom Payload CMS dashboard for intuitive content administration",
       ],
     },
     {
@@ -56,14 +56,14 @@ export const profileData = {
       period: "2022 - Present",
       techStack: ["Next.js", "React", "Node.js", "TypeScript", "Tailwind CSS"],
       description:
-        "Created high-performance, SEO-optimized landing pages that increased client conversion rates by 25-40%",
+        "Engineered high-performance, SEO-focused landing pages, driving client conversion rate increases between 25% and 40%",
       features: [
-        "Developed responsive and modern landing pages with optimal performance",
-        "Implemented SEO best practices and meta tag optimization",
-        "Built dynamic content management systems for easy content updates",
-        "Integrated analytics and tracking systems for performance monitoring",
-        "Created reusable component libraries for consistent design",
-        "Optimized images and assets for fast loading times",
+        "Built pixel-perfect, responsive landing pages optimized for core web vitals",
+        "Applied technical SEO and structured data strategies for enhanced search visibility",
+        "Integrated headless CMS solutions for effortless client-side content updates",
+        "Set up comprehensive analytics for data-driven performance optimization",
+        "Developed reusable component libraries ensuring brand consistency and accelerated development",
+        "Employed advanced asset optimization techniques for sub-second loading times",
       ],
     },
   ],
@@ -90,8 +90,6 @@ export const profileData = {
         ".NET Framework",
         "Entity Framework",
         "Adobe PWA Studio",
-        "Express.js",
-        "Tailwind CSS",
       ],
     },
     {
@@ -104,6 +102,7 @@ export const profileData = {
         "MongoDB",
         "Firebase",
         "Redis",
+        "Supabase",
       ],
     },
     {
@@ -117,7 +116,6 @@ export const profileData = {
         "Agile Development",
         "NPM Package Development",
         "Docker",
-        "Azure DevOps",
         "CI/CD Pipelines",
       ],
     },
@@ -136,20 +134,17 @@ export const profileData = {
         },
         {
           name: "@sliderzz/fleek-infinite-scroll",
-          description:
-            "High-performance infinite scrolling for dynamic content.",
+          description: "High-performance infinite scrolling for dynamic content.",
           link: "https://www.npmjs.com/package/@sliderzz/fleek-infinite-scroll",
         },
         {
           name: "@sliderzz/fleek-data-table",
-          description:
-            "Customizable and optimized data table for handling large datasets.",
+          description: "Customizable and optimized data table for handling large datasets.",
           link: "https://www.npmjs.com/package/@sliderzz/fleek-data-table",
         },
         {
           name: "@sliderzz/fleek-multistepform",
-          description:
-            "Smooth multi-step form library with advanced state management.",
+          description: "Smooth multi-step form library with advanced state management.",
           link: "https://www.npmjs.com/package/@sliderzz/fleek-multistepform",
         },
       ],
