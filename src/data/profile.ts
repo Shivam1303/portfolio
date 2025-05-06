@@ -126,7 +126,7 @@ export const profileData = {
   ],
   openSourceContributions: [
     {
-      title: "Fleek UI Components (NPM Packages)",
+      title: "Fleek UI (NPM Packages)",
       description:
         "Developed & published a suite of scalable UI components for modern web apps, enhancing performance & UX. Packages have over 5,000 monthly downloads.",
       techStack: ["TypeScript", "React", "Node.js", "Webpack", "NPM"],
@@ -156,7 +156,7 @@ export const profileData = {
   ],
   projects: [
     {
-      title: "Typify (TypeScript Utility Library)",
+      title: "Typify (JavaScript to TypeScript)",
       description:
         "Designed and published a type utility library for TypeScript, simplifying deep object type management. Provides schema validation, deep type transformations, and type utilities, improving developer experience in TypeScript projects. Achieved 3,000+ monthly downloads.",
       image: "/projects/typify.png",
