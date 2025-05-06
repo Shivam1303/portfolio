@@ -71,7 +71,7 @@ export const profileData = {
     {
       degree: "B-Tech in Computer Engineering",
       institution: "University of Engineering and Technology",
-      period: "Aug 2021 – May 2024",
+      period: "2021 - 2024",
     },
   ],
   skills: [
@@ -90,6 +90,10 @@ export const profileData = {
         ".NET Framework",
         "Entity Framework",
         "Adobe PWA Studio",
+        "Knockout.js",
+        "Fabric.js",
+        "Three.js",
+        "Flutter",
       ],
     },
     {
