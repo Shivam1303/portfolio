@@ -100,7 +100,7 @@ export const HeroSection = () => {
           <div className="flex flex-col md:flex-row gap-6 items-center">
             <div className="flex-1">
               <h2 className="text-xl font-medium mb-2">Software Engineer</h2>
-              <p className="text-muted-foreground text-sm">
+              <p className="text-muted-foreground text-sm hidden">
                 Currently crafting digital experiences at{' '}
                 <span className="text-primary font-medium">
                   {profileData.workExperience[0]?.company}
