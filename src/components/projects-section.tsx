@@ -43,17 +43,20 @@ export const ProjectsSection = () => {
                   {project.title}
                 </h3>
                 <p className="text-muted-foreground mb-4 line-clamp-2">{project.description}</p>
-                {project.link && (
-                  <Link
-                    href={project.link.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center text-base font-medium text-primary hover:text-primary/80 transition-colors"
-                  >
-                    {project.link.text}
-                    <ExternalLink className="ml-1 h-4 w-4" />
-                  </Link>
-                )}
+                <div className="flex flex-wrap gap-4">
+                  {project.links && project.links.map((link, linkIndex) => (
+                    <Link
+                      key={linkIndex}
+                      href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center text-base font-medium text-primary hover:text-primary/80 transition-colors"
+                    >
+                      {link.text}
+                      <ExternalLink className="ml-1 h-4 w-4" />
+                    </Link>
+                  ))}
+                </div>
               </div>
             </div>
           ))}
