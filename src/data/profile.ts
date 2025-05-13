@@ -193,7 +193,7 @@ export const profileData = {
     {
       title: "Twizzli",
       description:
-        "Tweet scheduler for twitter with capabilities to generate tweets with AI.",
+        "Tweet scheduler with capabilities to generate tweets with AI.",
       image: "/projects/twizzli.png",
       links: [
         {
