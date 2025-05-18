@@ -93,7 +93,6 @@ export const profileData = {
         "Knockout.js",
         "Fabric.js",
         "Three.js",
-        "Flutter",
       ],
     },
     {
@@ -105,7 +104,6 @@ export const profileData = {
         "Google BigQuery",
         "MongoDB",
         "Firebase",
-        "Redis",
         "Supabase",
       ],
     },
@@ -119,8 +117,6 @@ export const profileData = {
         "Git",
         "Agile Development",
         "NPM Package Development",
-        "Docker",
-        "CI/CD Pipelines",
       ],
     },
   ],
@@ -145,13 +141,12 @@ export const profileData = {
         {
           name: "@sliderzz/fleek-data-table",
           description:
-            "Customizable and optimized data table for handling large datasets.",
+            "Customizable and optimized data table for handling datasets.",
           link: "https://www.npmjs.com/package/@sliderzz/fleek-data-table",
         },
         {
           name: "@sliderzz/fleek-multistepform",
-          description:
-            "Smooth multi-step form library with advanced state management.",
+          description: "Smooth multi-step form library with state management.",
           link: "https://www.npmjs.com/package/@sliderzz/fleek-multistepform",
         },
       ],
@@ -161,7 +156,7 @@ export const profileData = {
     {
       title: "Typify (JavaScript to TypeScript)",
       description:
-        "Designed and published a type utility library for TypeScript, simplifying deep object type management. Provides schema validation, deep type transformations, and type utilities, improving developer experience in TypeScript projects. Achieved 3,000+ monthly downloads.",
+        "Developed and published a CLI utility to ease the js to ts migration for better development",
       image: "/projects/typify.png",
       links: [
         {
@@ -186,14 +181,14 @@ export const profileData = {
         },
         {
           url: "https://playlist-heaven.vercel.app",
-          text: "Live Demo",
+          text: "Live",
         },
       ],
     },
     {
       title: "Twizzli",
       description:
-        "Tweet scheduler with capabilities to generate tweets with AI.",
+        "A Tweet scheduler with capabilities to generate tweets with AI.",
       image: "/projects/twizzli.png",
       links: [
         {
@@ -202,7 +197,7 @@ export const profileData = {
         },
         {
           url: "https://automate-twitter.vercel.app",
-          text: "Live Demo",
+          text: "Live",
         },
       ],
     },
