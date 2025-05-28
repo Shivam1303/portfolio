@@ -138,7 +138,7 @@ export const sharedMetadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Shivam Trivedi | Software Engineer & Freelance Developer",
+    title: "Shivam Trivedi | Software Engineer & Freelance",
     description: `${profileData.about[0]} Available for freelance projects and full-time opportunities. Based in ${profileData.location}.`,
     creator: "@io_shivam",
     images: ["/og-image.webp"],
