@@ -401,7 +401,7 @@ export const StructuredData = () => {
     '@type': 'SoftwareSourceCode',
     name: project.title,
     description: project.description,
-    codeRepository: project.link.url,
+    codeRepository: project.links && project.links.length > 0 ? project.links[0].url : '',
     programmingLanguage: {
       '@type': 'ComputerLanguage',
       name: 'JavaScript/TypeScript',
