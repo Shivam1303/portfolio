@@ -84,7 +84,6 @@ export const profileData = {
       items: [
         "Node.js",
         "React",
-        "Next.js",
         "Angular",
         ".NET Core",
         ".NET Framework",
