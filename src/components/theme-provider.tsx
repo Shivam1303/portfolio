@@ -1,89 +1,35 @@
 "use client";
+import { createContext, useContext, useEffect, useMemo, useSyncExternalStore } from "react";
 
-import { createContext, useContext, useEffect, useState } from "react";
+type Theme = "light" | "dark";
+const ThemeContext = createContext<{ resolvedTheme: Theme; toggleTheme: () => void }>({ resolvedTheme: "light", toggleTheme: () => undefined });
+const themeChangeEvent = "portfolio-theme-change";
 
-type Theme = "dark" | "light" | "system";
+function readTheme(): Theme {
+  const saved = window.localStorage.getItem("portfolio-theme") as Theme | null;
+  return saved ?? (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+}
 
-type ThemeProviderProps = {
-    children: React.ReactNode;
-    defaultTheme?: Theme;
-    storageKey?: string;
-    attribute?: string;
-    enableSystem?: boolean;
-    disableTransitionOnChange?: boolean;
-};
+function subscribeToTheme(onStoreChange: () => void) {
+  const media = window.matchMedia("(prefers-color-scheme: dark)");
+  window.addEventListener("storage", onStoreChange);
+  window.addEventListener(themeChangeEvent, onStoreChange);
+  media.addEventListener("change", onStoreChange);
+  return () => {
+    window.removeEventListener("storage", onStoreChange);
+    window.removeEventListener(themeChangeEvent, onStoreChange);
+    media.removeEventListener("change", onStoreChange);
+  };
+}
 
-type ThemeProviderState = {
-    theme: Theme;
-    setTheme: (theme: Theme) => void;
-};
+function getServerTheme(): Theme {
+  return "light";
+}
 
-const initialState: ThemeProviderState = {
-    theme: "system",
-    setTheme: () => null,
-};
-
-const ThemeProviderContext = createContext<ThemeProviderState>(initialState);
-
-export const ThemeProvider = ({
-    children,
-    defaultTheme = "system",
-    storageKey = "theme",
-    ...props
-}: ThemeProviderProps) => {
-    const [theme, setTheme] = useState<Theme>(defaultTheme);
-    const [mounted, setMounted] = useState(false);
-
-    // Once mounted on client, get the theme from localStorage
-    useEffect(() => {
-        setMounted(true);
-        const savedTheme = localStorage.getItem(storageKey) as Theme;
-        if (savedTheme) {
-            setTheme(savedTheme);
-        }
-    }, [storageKey]);
-
-    useEffect(() => {
-        if (!mounted) return;
-
-        const root = window.document.documentElement;
-        root.classList.remove("light", "dark");
-
-        if (theme === "system") {
-            const systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
-                .matches
-                ? "dark"
-                : "light";
-
-            root.classList.add(systemTheme);
-            return;
-        }
-
-        root.classList.add(theme);
-    }, [theme, mounted]);
-
-    const value = {
-        theme,
-        setTheme: (theme: Theme) => {
-            if (mounted) {
-                localStorage.setItem(storageKey, theme);
-            }
-            setTheme(theme);
-        },
-    };
-
-    return (
-        <ThemeProviderContext.Provider {...props} value={value}>
-            {children}
-        </ThemeProviderContext.Provider>
-    );
-};
-
-export const useTheme = () => {
-    const context = useContext(ThemeProviderContext);
-
-    if (context === undefined)
-        throw new Error("useTheme must be used within a ThemeProvider");
-
-    return context;
-}; 
+export function ThemeProvider({ children }: { children: React.ReactNode }) {
+  const theme = useSyncExternalStore(subscribeToTheme, readTheme, getServerTheme);
+  useEffect(() => { document.documentElement.dataset.theme = theme; document.documentElement.style.colorScheme = theme; }, [theme]);
+  const value = useMemo(() => ({ resolvedTheme: theme, toggleTheme: () => { const next = theme === "dark" ? "light" : "dark"; window.localStorage.setItem("portfolio-theme", next); window.dispatchEvent(new Event(themeChangeEvent)); } }), [theme]);
+  return <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>;
+}
+export const useTheme = () => useContext(ThemeContext);

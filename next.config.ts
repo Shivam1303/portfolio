@@ -4,7 +4,12 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   reactStrictMode: true,
   images: {
-    domains: ['shivamtrivedi.in'],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "shivamtrivedi.in",
+      },
+    ],
   },
   async headers() {
     return [
