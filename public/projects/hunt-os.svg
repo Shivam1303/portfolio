@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1120" role="img" aria-labelledby="title desc">
+  <title id="title">HuntOS project cover</title>
+  <desc id="desc">Editorial interface illustration for an AI-assisted lead-hunting workflow.</desc>
+  <rect width="1600" height="1120" fill="#161513"/>
+  <path d="M0 88h1600M0 1032h1600M88 0v1120M1512 0v1120" stroke="#393631" stroke-width="2"/>
+  <g fill="#f1e9dc" font-family="Arial, Helvetica, sans-serif">
+    <text x="128" y="148" font-size="34" font-weight="700" letter-spacing="8">HUNTOS</text>
+    <text x="128" y="196" fill="#9c968c" font-size="20" letter-spacing="3">AI-ASSISTED LEAD WORKFLOW</text>
+  </g>
+  <circle cx="1432" cy="142" r="14" fill="#ff6b45"/>
+  <text x="1387" y="184" fill="#9c968c" font-family="Arial, Helvetica, sans-serif" font-size="16" letter-spacing="2">ACTIVE</text>
+  <g transform="translate(128 278)">
+    <rect width="1344" height="622" rx="4" fill="#201e1b" stroke="#3d3934" stroke-width="2"/>
+    <rect width="330" height="622" fill="#1b1a18"/>
+    <g font-family="Arial, Helvetica, sans-serif">
+      <text x="38" y="54" fill="#8e887e" font-size="16" letter-spacing="3">PIPELINE</text>
+      <g font-size="21" font-weight="700">
+        <rect x="24" y="84" width="282" height="70" fill="#ff6b45"/>
+        <text x="48" y="128" fill="#161513">01  IMPORT</text>
+        <text x="48" y="213" fill="#ddd5c8">02  ANALYZE</text>
+        <text x="48" y="288" fill="#ddd5c8">03  SCORE</text>
+        <text x="48" y="363" fill="#ddd5c8">04  RESEARCH</text>
+        <text x="48" y="438" fill="#ddd5c8">05  DRAFT</text>
+        <text x="48" y="513" fill="#ddd5c8">06  REVIEW</text>
+      </g>
+      <text x="378" y="60" fill="#8e887e" font-size="16" letter-spacing="3">OPPORTUNITY / 024</text>
+      <text x="378" y="136" fill="#f1e9dc" font-size="54" font-weight="700">Find the right work.</text>
+      <text x="378" y="194" fill="#ff6b45" font-size="54" font-weight="700">Keep humans in control.</text>
+      <line x1="378" y1="242" x2="1298" y2="242" stroke="#3d3934" stroke-width="2"/>
+      <text x="378" y="294" fill="#8e887e" font-size="15" letter-spacing="2">FIT SCORE</text>
+      <text x="378" y="378" fill="#f1e9dc" font-size="82" font-weight="700">86</text>
+      <text x="502" y="372" fill="#ff6b45" font-size="20" font-weight="700">STRONG MATCH</text>
+      <g transform="translate(378 438)">
+        <rect width="254" height="82" fill="#292622"/>
+        <rect x="274" width="254" height="82" fill="#292622"/>
+        <rect x="548" width="372" height="82" fill="#292622"/>
+        <text x="22" y="32" fill="#8e887e" font-size="13" letter-spacing="2">SOURCE</text>
+        <text x="22" y="61" fill="#f1e9dc" font-size="18">CSV IMPORT</text>
+        <text x="296" y="32" fill="#8e887e" font-size="13" letter-spacing="2">DECISION</text>
+        <text x="296" y="61" fill="#f1e9dc" font-size="18">RULE-BASED</text>
+        <text x="570" y="32" fill="#8e887e" font-size="13" letter-spacing="2">OUTBOUND</text>
+        <text x="570" y="61" fill="#f1e9dc" font-size="18">HUMAN APPROVAL REQUIRED</text>
+      </g>
+    </g>
+  </g>
+  <text x="128" y="982" fill="#8e887e" font-family="Arial, Helvetica, sans-serif" font-size="17" letter-spacing="3">PYTHON · FASTAPI · POSTGRESQL · GEMINI</text>
+</svg>
