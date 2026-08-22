@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import { profile } from "@/data/profile";
 import { ThemeToggle } from "./theme-toggle";
 
-const links = [{ href: "/#projects", label: "Work" }, { href: "/#experience", label: "Experience" }, { href: "/#about", label: "About" }, { href: "/#contact", label: "Contact" }];
+const links = [{ href: "/#projects", label: "Work" }, { href: "/#contact", label: "Contact" }];
 
 export function Header() {
   const [open, setOpen] = useState(false);

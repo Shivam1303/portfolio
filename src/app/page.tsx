@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowDownRight, ArrowUpRight, Code2, Mail, Network, MapPin } from "lucide-react";
+import { ArrowDownRight, ArrowUpRight, Code2, Mail, Network } from "lucide-react";
 import { ProjectCard } from "@/components/project-card";
 import { SectionHeading } from "@/components/section-heading";
 import { profile, projects } from "@/data/profile";
@@ -35,23 +35,9 @@ export default function Home() {
         <div className="section-link"><Link href="/projects">Explore all projects <ArrowUpRight aria-hidden="true" /></Link></div>
       </section>
 
-      <section id="experience" className="section section-rule">
-        <div className="site-container split-layout">
-          <SectionHeading index="02" eyebrow="Experience" title="Building for scale, speed, and people." />
-          <div className="experience-list">
-            {profile.experience.map((job) => <article key={job.company} className="experience-item"><div className="experience-meta"><p>{job.period}</p><p>{job.company}</p></div><div><h3>{job.title}</h3><ul>{job.achievements.map((achievement) => <li key={achievement}>{achievement}</li>)}</ul></div></article>)}
-          </div>
-        </div>
-      </section>
+      <section id="skills" className="section section-rule"><div className="site-container"><SectionHeading index="02" eyebrow="Toolkit" title="Comfortable across the stack." /><div className="skills-grid">{profile.skills.map((group) => <article key={group.category}><h3>{group.category}</h3><ul>{group.items.map((item) => <li key={item}>{item}</li>)}</ul></article>)}</div></div></section>
 
-      <section id="about" className="section site-container about-layout">
-        <SectionHeading index="03" eyebrow="About" title="A practical approach to ambitious work." />
-        <div className="about-content"><div className="prose">{profile.about.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div><dl className="about-facts"><div><dt>Location</dt><dd><MapPin aria-hidden="true" />{profile.location}</dd></div><div><dt>Education</dt><dd>{profile.education.degree}<small>{profile.education.institution}, {profile.education.period}</small></dd></div></dl></div>
-      </section>
-
-      <section id="skills" className="section section-rule"><div className="site-container"><SectionHeading index="04" eyebrow="Toolkit" title="Comfortable across the stack." /><div className="skills-grid">{profile.skills.map((group) => <article key={group.category}><h3>{group.category}</h3><ul>{group.items.map((item) => <li key={item}>{item}</li>)}</ul></article>)}</div></div></section>
-
-      <section className="section site-container"><SectionHeading index="05" eyebrow="Independent work" title="Useful systems for real teams." /><div className="work-list">{profile.freelanceWork.map((work) => <article key={work.title}><div><p className="item-period">{work.period}</p><h3>{work.title}</h3></div><p>{work.description}</p><ul className="tag-list">{work.technologies.map((technology) => <li key={technology}>{technology}</li>)}</ul></article>)}</div></section>
+      <section className="section site-container"><SectionHeading index="03" eyebrow="Independent work" title="Useful systems for real teams." /><div className="work-list">{profile.freelanceWork.map((work) => <article key={work.title}><div><p className="item-period">{work.period}</p><h3>{work.title}</h3></div><p>{work.description}</p><ul className="tag-list">{work.technologies.map((technology) => <li key={technology}>{technology}</li>)}</ul></article>)}</div></section>
 
       <section className="section section-rule"><div className="site-container open-source"><div><p className="eyebrow">Open source</p><h2>{profile.openSource.title}</h2><p>{profile.openSource.description}</p><a className="text-link" href={profile.links.npm} target="_blank" rel="noreferrer">View on npm <ArrowUpRight aria-hidden="true" /></a></div><div className="package-list">{profile.openSource.packages.map((pkg) => <a key={pkg.name} href={pkg.href} target="_blank" rel="noreferrer"><strong>{pkg.name}</strong><span>{pkg.description}</span><ArrowUpRight aria-hidden="true" /></a>)}</div></div></section>
 

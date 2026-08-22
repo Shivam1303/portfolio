@@ -24,7 +24,7 @@ export const profile = {
   location: "Vadodara, Gujarat",
   email: "shivam.trivedi.dev@gmail.com",
   introduction:
-    "I build thoughtful, high-performance web products—from polished interfaces to dependable systems behind them.",
+    "I build thoughtful, high-performance web products, from polished interfaces to dependable systems behind them.",
   about: [
     "I’m a software engineer who enjoys building fast, scalable, user-friendly applications. I work across modern JavaScript frameworks and .NET, from reusable interface systems to backend performance work.",
     "I’m drawn to practical problems, clear product thinking, and the details that make software feel considered. Outside of code, I enjoy exploring new places and fresh perspectives.",
@@ -39,7 +39,7 @@ export const profile = {
     {
       title: "Associate Software Engineer",
       company: "Helios Solutions",
-      period: "Jan 2024 — Present",
+      period: "Jan 2024 - Present",
       achievements: [
         "Optimized a certification and quote generation system using Angular, .NET, and MSSQL, improving document generation speed by 40% and sales accuracy by 45%.",
         "Developed a product customization platform with Fabric.js, Knockout.js, Three.js, and .NET that processes 5K+ images daily and reduced server response time by 35%.",
@@ -56,19 +56,19 @@ export const profile = {
     },
     {
       title: "Internal Portal Development",
-      period: "2024 — 2025",
+      period: "2024 - 2025",
       description: "A unified internal portal that improved cross-department collaboration and operational efficiency by 35%.",
       technologies: ["Next.js", "Payload CMS", "Microsoft Authentication", "TypeScript", "Tailwind CSS"],
     },
     {
       title: "Tourism Landing Page",
-      period: "2022 — Present",
+      period: "2022 - Present",
       description: "A dynamic tourism website with real-time content updates and Payload CMS integration, increasing visitor engagement by 30%.",
       technologies: ["Next.js", "Payload CMS", "React", "Node.js", "TypeScript"],
     },
     {
       title: "City Management Agency Landing Page",
-      period: "2022 — Present",
+      period: "2022 - Present",
       description: "A high-performance, SEO-focused site that streamlined citizen engagement and increased service request submissions by 25%.",
       technologies: ["Next.js", "React", "Node.js", "TypeScript", "Tailwind CSS"],
     },
@@ -79,7 +79,7 @@ export const profile = {
     { category: "Data & platform", items: ["PostgreSQL", "MySQL", "MSSQL", "MongoDB", "Supabase", "Firebase"] },
     { category: "Interface & delivery", items: ["Tailwind CSS", "Three.js", "Fabric.js", "Git", "REST APIs", "NPM packages"] },
   ],
-  education: { degree: "B-Tech in Computer Engineering", institution: "University of Engineering and Technology", period: "2021 — 2024" },
+  education: { degree: "B-Tech in Computer Engineering", institution: "University of Engineering and Technology", period: "2021 - 2024" },
   openSource: {
     title: "Fleek UI",
     description: "A collection of reusable UI packages for modern web applications, with over 5,000 monthly downloads.",
